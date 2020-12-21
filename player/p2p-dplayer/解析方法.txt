@@ -1,0 +1,38 @@
+﻿https://x3.nohacks.cn/?flag=1&type=zuidam3u8&id=37494&wd=双世宠妃
+
+http://vpf.3vkj.net/xv/index.jx.html?live=0&autoplay=1&url=http%3A%2F%2Ffuli.yazyzw.com%2F20170711%2FrJ1Yph4h%2Findex.m3u8&logo_off=0&logo_style=bGVmdDowcHg7IHRvcDo1MHB4O21heC13aWR0aDoxMDBweDttYXgtaGVpZ2h0OjEwMHB4&ver=x&p2pinfo=1&posterr=1&seektime=1&danmaku=1
+http://vpf.3vkj.net/xv/index.jx.html?live=0&autoplay=1&url=http%3A%2F%2Ffuli.yazyzw.com%2F20170711%2FrJ1Yph4h%2Findex.m3u8&logo_off=0&logo_style=bGVmdDowcHg7IHRvcDo1MHB4O21heC13aWR0aDoxMDBweDttYXgtaGVpZ2h0OjEwMHB4&ver=x&p2pinfo=1&posterr=1&seektime=1&danmaku=1
+http://vpf.3vkj.net/xv/index.jx.html?live=0&autoplay=1&url=http%3A%2F%2Ffuli.yazyzw.com%2F20170711%2FrJ1Yph4h%2Findex.m3u8&logo_off=0&logo_style=bGVmdDowcHg7IHRvcDo1MHB4O21heC13aWR0aDoxMDBweDttYXgtaGVpZ2h0OjEwMHB4&ver=x&p2pinfo=1&posterr=1&seektime=1&danmaku=1
+
+api:https://x3.nohacks.cn/api.php?tp=getparm&cb=jQuery18208516081325979112_1554291755577&_=1554291755682
+
+
+
+ public function getCurrentUrl() {
+ 2         $pageURL = 'http';
+ 3 
+ 4         if ($_SERVER["HTTPS"] == "on") {
+ 5             $pageURL .= "s";
+ 6         }
+ 7         $pageURL .= "://";
+ 8 
+ 9         if ($_SERVER["SERVER_PORT"] != "80") {
+10             $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+11         } else {
+12             $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+13         }
+14         return $pageURL;
+15     }
+16     /**
+17      * @param $key
+18      * @return mixed
+19      * $_GET[]
+20      */
+21     public function getP($key) {
+22         $url = $this->getCurrentUrl();
+23         //$url = urldecode($str);
+24         $urlArr = explode('?', $url);
+25         $queryParam = $urlArr[1];
+26         parse_str($queryParam);
+27         return $$key;
+28     }

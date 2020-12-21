@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+ <!--[if lt IE 7 ]><html class=ie6><![endif]--> <!--[if IE 7 ]><html class=ie7><![endif]--> <!--[if IE 8 ]><html class=ie8><![endif]--> <!--[if IE 9 ]><html class=ie9><![endif]--> <!--[if (gt IE 9)|!(IE)]><!--><html class=w3c><!--<![endif]-->       
+<html><head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta http-equiv="pragma" content="no-cache" /><meta http-equiv="expires" content="0" />
+<meta name="keywords" content="vip视频解析,vip视频在线解析,vip解析,万能vip视频解析,vip视频全能解析,vip视频,手机vip视频解析,手机在线解析vip视频,优酷vip解析,爱奇艺vip解析,腾讯vip解析,乐视vip解析,芒果vip解析" />
+<meta name="description" content="XyPlayer 智能解析为您免费解析主流视频网站的VIP视频,支持爱奇艺、腾讯、优酷、乐视、芒果、搜狐、PPTV等等，可搜索最新的免费福利视频、电影和电视剧资源，欢迎使用！" />   
+<title id="info">XyPlayer 智能解析 X3</title> 
+<style>
+html,body{overflow:hidden;  
+width:100%;
+height: 100%; 
+margin: 0;
+padding: 0;
+}
+</style>
+</head>
+<body>
+
+ <script>
+var _hmt = _hmt || [];
+   (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?dea6bad1057861a8f0ec2b6f8332eec1";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm,s);
+})();
+</script>
+<script type="text/javascript" src="./js/xplayer.js"></script>
+<script>
+//updateInfo('?v='+v)
+console.log("location.search内容："+playurl);
+upInfo(wd,G_url,v,flag,playurl);
+console.log("参数v1内容："+v);
+console.log("参数wd1内容："+wd);
+console.log("参数G_url1内容："+G_url);
+function upInfo(namewd,nameurl,namev,nameflag,nameplayurl) {
+       var zcf='./yunso';//./yunso.x.html
+       //var zcs='./play/';
+       var zcs='index2v.html';
+       var wd=namewd;
+       var G_url=nameurl;
+       var v=namev;
+       var flag=nameflag;
+       var playurl=nameplayurl
+console.log("参数v2内容："+v);
+console.log("参数wd2内容："+wd);
+console.log("参数G_url2内容："+G_url);
+if(wd==="" && G_url==="" && v==="" && flag===""){
+      updateInfo(zcf);
+}else{  if(v!==""){updateInfo(zcf+'?v='+namev);}
+      if(flag!==""){ updateInfo(zcs+nameplayurl); }
+      if(wd!==""){ updateInfo(zcf+'?wd='+namewd); }
+      if(G_url!==""){ updateInfo(zcf+'?url='+nameplayurl); }
+    }
+  }
+
+function updateInfo(name) {
+
+var sdurl=name;//+'?'+name+'='+name;
+
+ var body = document.getElementsByTagName('body');       
+            document.body.innerHTML += '<iframe width="100%" height="100%" src='+sdurl+' frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="allowfullscreen"  mozallowfullscreen="mozallowfullscreen"  msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" ></iframe>';}
+ /*
+<div id="clock" style="position: static; left: 8.5px;">
+<div id="main"></div>
+<div class="clearfloat"></div>
+<p class="date"></p>
+<p class="time" id="time">12:11:02</p>
+<p class="text" id="text">2019-04-30 星期二</p><br>
+<div class="search bar6">
+<form action="./" method="get">
+<input id="wd" type="text" name="v" placeholder="请输入视频链接或名称" autocomplete="off"  onmouseover = "func(word)"  onmouseout = "func1(word)">
+<button type="submit" id="btn"></button>
+<!--<input type="submit" value="百度一下" id="btn">-->
+<div id="word"   onmouseover = "func(this)"  onmouseout = "func1(this)" style="display: none;"></div>
+</form>
+ <div class="resou">
+    <font face="verdana" style="color:#50b2c8;"> 热门搜索：</font>
+        <a href="./?v=飞驰人生">飞驰人生</a>
+       <a href="./?v=流浪地球">流浪地球</a>
+       <a href="./?v=绿皮书">绿皮书</a>
+       <a href="./?v=疯狂的外星人">疯狂的外星人</a>
+   
+ </div> 
+    
+    
+<div>    
+<br>
+<font face="verdana" style="color:#50b2c8;">解析支持：优酷、爱奇艺、腾讯、芒果、乐视、搜狐、MP4、M3U8、FLV等等</font><br><br>
+*/           
+ </script>
+<script type="text/javascript">
+function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for ( var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+var Request=undefined;
+Request=GetRequest();
+var id=Request["flag"];
+//?flag=1&type=zuidam3u8&id=53994&wd=双世宠妃2
+
+ function getQuery(){
+          let res = {},query=window.location.href.split(/\?(?!.*\?)/)[1];
+          if(query){
+            let arr =query.split("&");
+            for(let i = 0, len = arr.length; i < len; i++){
+              res[arr[i].split("=")[0]] = arr[i].split("=")[1]
+            }
+          }
+          return res;
+    }
+   console.log(getQuery());//var obj1 = eval(ids);
+</script>     
+</body>
+</html>
